@@ -16,7 +16,8 @@
 		ECE3FF4124E2E11400CEF33F /* EmojiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF4024E2E11400CEF33F /* EmojiAppTests.swift */; };
 		ECE3FF4C24E2E11400CEF33F /* EmojiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF4B24E2E11400CEF33F /* EmojiAppUITests.swift */; };
 		ECE3FF5B24E2E2FD00CEF33F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF5A24E2E2FD00CEF33F /* HomeScreenViewController.swift */; };
-		ECE3FF5E24E2E39C00CEF33F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF5D24E2E39C00CEF33F /* Colors.swift */; };
+		ECE3FF5E24E2E39C00CEF33F /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF5D24E2E39C00CEF33F /* Gradients.swift */; };
+		ECE3FF6024E4243900CEF33F /* HomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF5F24E4243900CEF33F /* HomeButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,8 @@
 		ECE3FF4B24E2E11400CEF33F /* EmojiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiAppUITests.swift; sourceTree = "<group>"; };
 		ECE3FF4D24E2E11400CEF33F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECE3FF5A24E2E2FD00CEF33F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		ECE3FF5D24E2E39C00CEF33F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ECE3FF5D24E2E39C00CEF33F /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
+		ECE3FF5F24E4243900CEF33F /* HomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				ECE3FF5A24E2E2FD00CEF33F /* HomeScreenViewController.swift */,
+				ECE3FF5F24E4243900CEF33F /* HomeButtons.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 		ECE3FF5C24E2E37E00CEF33F /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				ECE3FF5D24E2E39C00CEF33F /* Colors.swift */,
+				ECE3FF5D24E2E39C00CEF33F /* Gradients.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -282,9 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECE3FF2E24E2E11000CEF33F /* ViewController.swift in Sources */,
-				ECE3FF5E24E2E39C00CEF33F /* Colors.swift in Sources */,
+				ECE3FF5E24E2E39C00CEF33F /* Gradients.swift in Sources */,
 				ECE3FF5B24E2E2FD00CEF33F /* HomeScreenViewController.swift in Sources */,
 				ECE3FF2A24E2E11000CEF33F /* AppDelegate.swift in Sources */,
+				ECE3FF6024E4243900CEF33F /* HomeButtons.swift in Sources */,
 				ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
