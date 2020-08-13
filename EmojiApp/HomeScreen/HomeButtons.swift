@@ -25,7 +25,7 @@ class HomeButtons : UIView {
         layer.shadowRadius = 6
         layer.shadowOpacity = 0.2
         layer.shadowOffset = .zero
-          return layer
+        return layer
       }()
     
     let image : UIImageView = {
@@ -57,11 +57,12 @@ class HomeButtons : UIView {
     func setupConstraints(){
         label.translatesAutoresizingMaskIntoConstraints = false
         label.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 100).isActive = true
+        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 
+        
         image.translatesAutoresizingMaskIntoConstraints = false
         image.topAnchor.constraint(equalTo: self.topAnchor, constant: 100).isActive = true
-        image.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 100).isActive = true
+        image.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
 }

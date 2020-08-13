@@ -7,21 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Screen View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="EmojiApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="139" y="138"/>
-        </scene>
         <!--Data-->
         <scene sceneID="eiq-EQ-Hkm">
             <objects>
@@ -36,9 +21,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ke5-Av-pKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2059" y="461"/>
+            <point key="canvasLocation" x="2968.115942028986" y="460.71428571428567"/>
         </scene>
-        <!--Home-->
+        <!--Home Screen View Controller-->
         <scene sceneID="2Kl-pB-0cV">
             <objects>
                 <viewController id="Qln-eL-cKc" customClass="HomeScreenViewController" customModule="EmojiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,11 +33,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0h2-Eq-Qcr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="POp-RM-xLW"/>
+                    <navigationItem key="navigationItem" id="wyZ-5p-UCW"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cre-Tk-q7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2059" y="-185"/>
+            <point key="canvasLocation" x="3878.2608695652175" y="-185.49107142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="c8g-RO-18C">
@@ -64,13 +50,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Qln-eL-cKc" kind="relationship" relationship="viewControllers" id="yss-a4-1Ko"/>
+                        <segue destination="bcL-rf-uvS" kind="relationship" relationship="viewControllers" id="yss-a4-1Ko"/>
                         <segue destination="TKb-u8-2y4" kind="relationship" relationship="viewControllers" id="xMj-hv-AgT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHg-uK-dz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1139" y="137"/>
+            <point key="canvasLocation" x="2047.826086956522" y="136.60714285714286"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="2o1-0U-i3O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bcL-rf-uvS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="POp-RM-xLW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DiC-y7-Ye3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qln-eL-cKc" kind="relationship" relationship="rootViewController" id="Lca-mR-3Dg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPw-C7-nH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2968.115942028986" y="-185.49107142857142"/>
         </scene>
     </scenes>
 </document>
