@@ -66,7 +66,7 @@ class HomeScreenViewController: UIViewController {
         createButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 231).isActive = true
         createButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
         createButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
-        createButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goAnswer)))
+        createButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goCreate)))
     }
     
     
@@ -77,6 +77,8 @@ class HomeScreenViewController: UIViewController {
            answerButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 489).isActive = true
         answerButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
             answerButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
+        answerButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goAnswer)))
+
 }
     
     func setWelcome(){
@@ -97,4 +99,9 @@ class HomeScreenViewController: UIViewController {
         self.navigationController?.pushViewController(answerView, animated: true)
     }
     
+    @objc func goCreate() {
+              let sampleStoryBoard : UIStoryboard = UIStoryboard(name: "Create", bundle:nil)
+              let answerView  = sampleStoryBoard.instantiateViewController(withIdentifier: "CreateScreenViewController") as! CreateScreenViewController
+           self.navigationController?.pushViewController(answerView, animated: true)
+       }
 }

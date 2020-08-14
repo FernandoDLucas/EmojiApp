@@ -21,6 +21,9 @@
 		ECE3FF6224E4371200CEF33F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF6124E4371200CEF33F /* Colors.swift */; };
 		ECE3FF6524E560DC00CEF33F /* AnswerScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF6424E560DC00CEF33F /* AnswerScreenViewController.swift */; };
 		ECE3FF6724E5658100CEF33F /* Answer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE3FF6624E5658100CEF33F /* Answer.storyboard */; };
+		ECE3FF6B24E60B6700CEF33F /* CreateScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF6A24E60B6700CEF33F /* CreateScreenViewController.swift */; };
+		ECE3FF6D24E60C5700CEF33F /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE3FF6C24E60C5700CEF33F /* Create.storyboard */; };
+		ECE3FF6F24E6BCEA00CEF33F /* AnswerCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		ECE3FF6124E4371200CEF33F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ECE3FF6424E560DC00CEF33F /* AnswerScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerScreenViewController.swift; sourceTree = "<group>"; };
 		ECE3FF6624E5658100CEF33F /* Answer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Answer.storyboard; sourceTree = "<group>"; };
+		ECE3FF6A24E60B6700CEF33F /* CreateScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenViewController.swift; sourceTree = "<group>"; };
+		ECE3FF6C24E60C5700CEF33F /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
+		ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		ECE3FF2824E2E11000CEF33F /* EmojiApp */ = {
 			isa = PBXGroup;
 			children = (
+				ECE3FF6924E60B1F00CEF33F /* CreateScreen */,
 				ECE3FF6324E560B100CEF33F /* AnswerScreen */,
 				ECE3FF5C24E2E37E00CEF33F /* Colors */,
 				ECE3FF5924E2E2D700CEF33F /* HomeScreen */,
@@ -122,6 +129,7 @@
 				ECE3FF3424E2E11300CEF33F /* LaunchScreen.storyboard */,
 				ECE3FF3724E2E11300CEF33F /* Info.plist */,
 				ECE3FF6624E5658100CEF33F /* Answer.storyboard */,
+				ECE3FF6C24E60C5700CEF33F /* Create.storyboard */,
 			);
 			path = EmojiApp;
 			sourceTree = "<group>";
@@ -166,8 +174,17 @@
 			isa = PBXGroup;
 			children = (
 				ECE3FF6424E560DC00CEF33F /* AnswerScreenViewController.swift */,
+				ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */,
 			);
 			path = AnswerScreen;
+			sourceTree = "<group>";
+		};
+		ECE3FF6924E60B1F00CEF33F /* CreateScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3FF6A24E60B6700CEF33F /* CreateScreenViewController.swift */,
+			);
+			path = CreateScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE3FF6D24E60C5700CEF33F /* Create.storyboard in Resources */,
 				ECE3FF6724E5658100CEF33F /* Answer.storyboard in Resources */,
 				ECE3FF3624E2E11300CEF33F /* LaunchScreen.storyboard in Resources */,
 				ECE3FF3324E2E11300CEF33F /* Assets.xcassets in Resources */,
@@ -310,6 +328,8 @@
 				ECE3FF2A24E2E11000CEF33F /* AppDelegate.swift in Sources */,
 				ECE3FF6024E4243900CEF33F /* HomeButtons.swift in Sources */,
 				ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */,
+				ECE3FF6B24E60B6700CEF33F /* CreateScreenViewController.swift in Sources */,
+				ECE3FF6F24E6BCEA00CEF33F /* AnswerCards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
