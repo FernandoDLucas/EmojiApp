@@ -14,7 +14,7 @@ class FirstBackgroundGradient{
 
        init(){
            let colorTop = UIColor(red: 255.0 / 255.0, green: 216.0 / 255.0, blue: 79.0 / 255.0, alpha: 1.0).cgColor
-           let colorBottom = UIColor(red: 236.0 / 255.0, green: 152.0 / 255.0, blue: 239.0 / 255.0, alpha: 1.0).cgColor
+           let colorBottom = UIColor(red: 255.0 / 255.0, green: 154.0 / 255.0, blue: 230.0 / 255.0, alpha: 1.0).cgColor
 
            self.gl = CAGradientLayer()
            self.gl.colors = [colorTop, colorBottom]
@@ -35,5 +35,4 @@ class SecBackgroundGradient{
            self.gl.locations = [0.0, 1.0]
        }
 }
-
 
