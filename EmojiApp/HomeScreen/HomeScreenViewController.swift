@@ -34,7 +34,13 @@ class HomeScreenViewController: UIViewController {
               buttom.Card.fillColor = UIColor.white.cgColor
         return buttom
     }()
-        
+    
+    let testeButton : RadioButton = {
+        let button = RadioButton()
+        button.backgroundColor = .red
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundLayer = colors.gl
@@ -48,6 +54,7 @@ class HomeScreenViewController: UIViewController {
         setCreateButtom()
         setAnswerButtom()
         setWelcome()
+        setTesteButtom()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +75,18 @@ class HomeScreenViewController: UIViewController {
         createButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
         createButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goCreate)))
     }
+
     
+    func setTesteButtom(){
+          self.view.addSubview(testeButton)
+          testeButton.translatesAutoresizingMaskIntoConstraints = false
+          testeButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+          testeButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 231).isActive = true
+          testeButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+          testeButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
+        testeButton.addTarget(self, action: #selector(testeButn), for: .touchUpInside)
+      }
+      
     
     func setAnswerButtom(){
            self.view.addSubview(answerButton)
@@ -104,4 +122,9 @@ class HomeScreenViewController: UIViewController {
               let answerView  = sampleStoryBoard.instantiateViewController(withIdentifier: "CreateScreenViewController") as! CreateScreenViewController
            self.navigationController?.pushViewController(answerView, animated: true)
        }
+    
+    @objc func testeButn(sender: UIButton) {
+        testeButton.isSelected = true
+        print("foi")
+    }
 }

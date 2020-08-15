@@ -37,6 +37,19 @@ class AnswerCards : UICollectionViewCell {
         return label
     }()
     
+    let buttom1: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .red
+        return button
+    }()
+    
+    let buttom2 : UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .black
+        return button
+    }()
+    
+    
     override init(frame: CGRect) {
              super.init(frame: frame)
              setupView()
@@ -54,6 +67,8 @@ class AnswerCards : UICollectionViewCell {
         self.layer.addSublayer(backgroundCard)
         self.label.frame = self.bounds
         self.addSubview(label)
+        self.addSubview(buttom1)
+        self.addSubview(buttom2)
     }
     
     func setupConstraints(){
@@ -61,5 +76,19 @@ class AnswerCards : UICollectionViewCell {
         label.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
         label.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 36).isActive = true
         label.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.3).isActive = true
+        
+        
+        buttom1.translatesAutoresizingMaskIntoConstraints = false
+         buttom1.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+         buttom1.widthAnchor.constraint(equalToConstant: 10).isActive = true
+         buttom1.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        
+        buttom2.translatesAutoresizingMaskIntoConstraints = false
+                buttom2.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
+                buttom2.widthAnchor.constraint(equalToConstant: 10).isActive = true
+                buttom2.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        
     }
 }
