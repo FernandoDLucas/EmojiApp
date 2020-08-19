@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC31409424EC83E40044EE88 /* Questionarie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409324EC83E40044EE88 /* Questionarie.swift */; };
+		EC31409724EC94C50044EE88 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409624EC94C50044EE88 /* HTTP.swift */; };
+		EC31409924EC96400044EE88 /* QuestionarieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409824EC96400044EE88 /* QuestionarieAPI.swift */; };
+		EC31409B24EC96750044EE88 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409A24EC96750044EE88 /* Router.swift */; };
+		EC31409E24EC98530044EE88 /* QuestionarieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409D24EC98530044EE88 /* QuestionarieRepository.swift */; };
+		ECCD4E7D24ED6D3F006765BA /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD4E7C24ED6D3F006765BA /* InitialScreen.swift */; };
 		ECE3FF2A24E2E11000CEF33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */; };
 		ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */; };
 		ECE3FF2E24E2E11000CEF33F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2D24E2E11000CEF33F /* ViewController.swift */; };
@@ -24,7 +30,8 @@
 		ECE3FF6B24E60B6700CEF33F /* CreateScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF6A24E60B6700CEF33F /* CreateScreenViewController.swift */; };
 		ECE3FF6D24E60C5700CEF33F /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE3FF6C24E60C5700CEF33F /* Create.storyboard */; };
 		ECE3FF6F24E6BCEA00CEF33F /* AnswerCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */; };
-		ECE3FF7224E8237D00CEF33F /* Radio Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF7124E8237D00CEF33F /* Radio Button.swift */; };
+		ECE3FF7224E8237D00CEF33F /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF7124E8237D00CEF33F /* RadioButton.swift */; };
+		ECE3FF7524E95EF700CEF33F /* RadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF7424E95EF700CEF33F /* RadioButtonsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC31409324EC83E40044EE88 /* Questionarie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionarie.swift; sourceTree = "<group>"; };
+		EC31409624EC94C50044EE88 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		EC31409824EC96400044EE88 /* QuestionarieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionarieAPI.swift; sourceTree = "<group>"; };
+		EC31409A24EC96750044EE88 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EC31409D24EC98530044EE88 /* QuestionarieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionarieRepository.swift; sourceTree = "<group>"; };
+		ECCD4E7C24ED6D3F006765BA /* InitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
 		ECE3FF2624E2E11000CEF33F /* EmojiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +81,8 @@
 		ECE3FF6A24E60B6700CEF33F /* CreateScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenViewController.swift; sourceTree = "<group>"; };
 		ECE3FF6C24E60C5700CEF33F /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCards.swift; sourceTree = "<group>"; };
-		ECE3FF7124E8237D00CEF33F /* Radio Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Radio Button.swift"; sourceTree = "<group>"; };
+		ECE3FF7124E8237D00CEF33F /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		ECE3FF7424E95EF700CEF33F /* RadioButtonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +110,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC31409224EC83D20044EE88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC31409324EC83E40044EE88 /* Questionarie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC31409524EC92ED0044EE88 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC31409624EC94C50044EE88 /* HTTP.swift */,
+				EC31409824EC96400044EE88 /* QuestionarieAPI.swift */,
+				EC31409A24EC96750044EE88 /* Router.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EC31409C24EC98110044EE88 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EC31409D24EC98530044EE88 /* QuestionarieRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		ECE3FF1D24E2E11000CEF33F = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +159,9 @@
 		ECE3FF2824E2E11000CEF33F /* EmojiApp */ = {
 			isa = PBXGroup;
 			children = (
+				EC31409C24EC98110044EE88 /* Repositories */,
+				EC31409524EC92ED0044EE88 /* Services */,
+				EC31409224EC83D20044EE88 /* Model */,
 				ECE3FF7024E8235F00CEF33F /* Radio Buttons */,
 				ECE3FF6924E60B1F00CEF33F /* CreateScreen */,
 				ECE3FF6324E560B100CEF33F /* AnswerScreen */,
@@ -178,6 +221,7 @@
 			children = (
 				ECE3FF6424E560DC00CEF33F /* AnswerScreenViewController.swift */,
 				ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */,
+				ECCD4E7C24ED6D3F006765BA /* InitialScreen.swift */,
 			);
 			path = AnswerScreen;
 			sourceTree = "<group>";
@@ -193,7 +237,8 @@
 		ECE3FF7024E8235F00CEF33F /* Radio Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				ECE3FF7124E8237D00CEF33F /* Radio Button.swift */,
+				ECE3FF7124E8237D00CEF33F /* RadioButton.swift */,
+				ECE3FF7424E95EF700CEF33F /* RadioButtonsController.swift */,
 			);
 			path = "Radio Buttons";
 			sourceTree = "<group>";
@@ -331,14 +376,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC31409E24EC98530044EE88 /* QuestionarieRepository.swift in Sources */,
 				ECE3FF2E24E2E11000CEF33F /* ViewController.swift in Sources */,
 				ECE3FF5E24E2E39C00CEF33F /* Gradients.swift in Sources */,
 				ECE3FF5B24E2E2FD00CEF33F /* HomeScreenViewController.swift in Sources */,
 				ECE3FF6224E4371200CEF33F /* Colors.swift in Sources */,
 				ECE3FF6524E560DC00CEF33F /* AnswerScreenViewController.swift in Sources */,
-				ECE3FF7224E8237D00CEF33F /* Radio Button.swift in Sources */,
+				ECCD4E7D24ED6D3F006765BA /* InitialScreen.swift in Sources */,
+				ECE3FF7224E8237D00CEF33F /* RadioButton.swift in Sources */,
 				ECE3FF2A24E2E11000CEF33F /* AppDelegate.swift in Sources */,
+				EC31409424EC83E40044EE88 /* Questionarie.swift in Sources */,
+				EC31409B24EC96750044EE88 /* Router.swift in Sources */,
+				ECE3FF7524E95EF700CEF33F /* RadioButtonsController.swift in Sources */,
+				EC31409724EC94C50044EE88 /* HTTP.swift in Sources */,
 				ECE3FF6024E4243900CEF33F /* HomeButtons.swift in Sources */,
+				EC31409924EC96400044EE88 /* QuestionarieAPI.swift in Sources */,
 				ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */,
 				ECE3FF6B24E60B6700CEF33F /* CreateScreenViewController.swift in Sources */,
 				ECE3FF6F24E6BCEA00CEF33F /* AnswerCards.swift in Sources */,

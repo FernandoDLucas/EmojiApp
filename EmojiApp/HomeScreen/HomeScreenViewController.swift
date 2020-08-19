@@ -19,7 +19,7 @@ class HomeScreenViewController: UIViewController {
         buttom.Card.fillColor = UIColor.white.cgColor
         return buttom
     }()
-    
+        
     let answerButton : HomeButtons = {
         let buttom = HomeButtons()
               buttom.label.text = """
@@ -35,17 +35,10 @@ class HomeScreenViewController: UIViewController {
         return buttom
     }()
     
-    let testeButton : RadioButton = {
-        let button = RadioButton()
-        button.backgroundColor = .red
-        return button
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundLayer = colors.gl
         backgroundLayer.frame = self.view.bounds
-        
         self.view.layer.addSublayer(backgroundLayer)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -54,12 +47,24 @@ class HomeScreenViewController: UIViewController {
         setCreateButtom()
         setAnswerButtom()
         setWelcome()
-        setTesteButtom()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
- }
+        QuestionarieRepository().read(category: QuestionarieAPI.teste){
+            (ress) in
+            switch ress {
+            case .success(let questionariesRess):
+                print(questionariesRess)
+            case .failure(let err):
+                print(err)
+                return
+            }
+
+        }
+    }
+
     
     override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         self.view.layer.sublayers?.first?.frame = self.view.bounds
@@ -75,18 +80,6 @@ class HomeScreenViewController: UIViewController {
         createButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
         createButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goCreate)))
     }
-
-    
-    func setTesteButtom(){
-          self.view.addSubview(testeButton)
-          testeButton.translatesAutoresizingMaskIntoConstraints = false
-          testeButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-          testeButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 231).isActive = true
-          testeButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-          testeButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
-        testeButton.addTarget(self, action: #selector(testeButn), for: .touchUpInside)
-      }
-      
     
     func setAnswerButtom(){
            self.view.addSubview(answerButton)
@@ -113,7 +106,7 @@ class HomeScreenViewController: UIViewController {
     
      @objc func goAnswer() {
            let sampleStoryBoard : UIStoryboard = UIStoryboard(name: "Answer", bundle:nil)
-           let answerView  = sampleStoryBoard.instantiateViewController(withIdentifier: "AnswerScreenViewController") as! AnswerScreenViewController
+           let answerView  = sampleStoryBoard.instantiateViewController(withIdentifier: "InitialAnswerScreenViewController") as! InitialAnswerScreenViewController
         self.navigationController?.pushViewController(answerView, animated: true)
     }
     
@@ -122,9 +115,4 @@ class HomeScreenViewController: UIViewController {
               let answerView  = sampleStoryBoard.instantiateViewController(withIdentifier: "CreateScreenViewController") as! CreateScreenViewController
            self.navigationController?.pushViewController(answerView, animated: true)
        }
-    
-    @objc func testeButn(sender: UIButton) {
-        testeButton.isSelected = true
-        print("foi")
-    }
 }

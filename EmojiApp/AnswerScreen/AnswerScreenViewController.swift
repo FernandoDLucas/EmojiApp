@@ -33,7 +33,6 @@ class AnswerScreenViewController : UIViewController{
         collectionView.dataSource = self
     }
     
-    
     override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         self.view.layer.sublayers?.first?.frame = self.view.bounds
     }
