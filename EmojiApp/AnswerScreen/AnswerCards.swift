@@ -11,6 +11,13 @@ import UIKit
 
 class AnswerCards : UICollectionViewCell {
     
+//    var question : Questionarie? = nil
+    var question : Question? = nil
+    
+    func config(of: Question){
+        label.text = of.text
+    }
+    
     let backgroundCard : CAShapeLayer = {
         let layer = CAShapeLayer()
         let circularPath = UIBezierPath( roundedRect: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 34, height: UIScreen.main.bounds.height * 0.39),
@@ -25,12 +32,11 @@ class AnswerCards : UICollectionViewCell {
         return layer
     }()
     
-    let label : UILabel = {
+   lazy var label : UILabel = {
         let label = UILabel()
-        label.text = "What do you think about today's police? we will gonna to try this way to teste if its fits in the same way lets do this until it hits the final line weé getting very close to it lets see now, from this it breaks"
         label.textAlignment = .center
         label.minimumScaleFactor = 0.1
-        label.numberOfLines = 0
+        label.numberOfLines = 5
         label.adjustsFontSizeToFitWidth = true
         label.font = .systemFont(ofSize: 34, weight: UIFont.Weight.bold)
         label.textColor = .calmPurple
@@ -39,28 +45,31 @@ class AnswerCards : UICollectionViewCell {
     
     let buttons : RadioButtonsController = {
         let buttons = RadioButtonsController()
+        buttons.emoji1.text = "☹️"
+        buttons.emoji2.text = "🙁"
+        buttons.emoji3.text = "😄"
+        buttons.emoji4.text = "😘"
+        buttons.emoji5.text = "💕"
         return buttons
     }()
     
     override init(frame: CGRect) {
              super.init(frame: frame)
              setupView()
-        setupConstraints()
+            setupConstraints()
          }
               
     required init?(coder: NSCoder) {
              super.init(coder: coder)
              setupView()
-        setupConstraints()
+            setupConstraints()
          }
          
     
     func setupView(){
         self.layer.addSublayer(backgroundCard)
-        self.label.frame = self.bounds
         self.addSubview(label)
         self.addSubview(buttons)
-
     }
     
     func setupConstraints(){
@@ -73,6 +82,20 @@ class AnswerCards : UICollectionViewCell {
         buttons.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         buttons.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 36).isActive = true
         buttons.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.1).isActive = true
-        
+
+     
     }
+    
+//
+//    emojisView.translatesAutoresizingMaskIntoConstraints = false
+//           emojisView.bottomAnchor.constraint(equalTo: label.bottomAnchor, constant: 7).isActive = true
+//           emojisView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 36).isActive = true
+//           emojisView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.12).isActive = true
+//           emojisView.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 17).isActive = true
+//           emojisView.arrangedSubviews.forEach {
+//               $0.translatesAutoresizingMaskIntoConstraints = false
+//               $0.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.12).isActive = true
+//               $0.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.12).isActive = true
+//           }
+//       }
 }

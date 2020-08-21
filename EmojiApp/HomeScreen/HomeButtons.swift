@@ -17,7 +17,7 @@ class HomeButtons : UIView {
     
     let Card : CAShapeLayer = {
           let layer = CAShapeLayer()
-        let circularPath = UIBezierPath( roundedRect: CGRect(x: 0, y: 0, width: 200, height: 180),
+        let circularPath = UIBezierPath( roundedRect: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * 0.45 , height: UIScreen.main.bounds.width * 0.40),
                        cornerRadius: 10)
           layer.path = circularPath.cgPath
           layer.lineCap = .round
@@ -56,12 +56,12 @@ class HomeButtons : UIView {
     
     func setupConstraints(){
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
+        label.topAnchor.constraint(equalToSystemSpacingBelow: self.topAnchor, multiplier: 4).isActive = true
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 
         
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.topAnchor.constraint(equalTo: self.topAnchor, constant: 100).isActive = true
+        image.topAnchor.constraint(equalToSystemSpacingBelow: label.topAnchor, multiplier: 6).isActive = true
         image.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     

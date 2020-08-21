@@ -10,7 +10,7 @@ import Foundation
 
 
 enum QuestionarieAPI: router {
-    case teste
+    case ID
     
     var hostname: String{
         get{
@@ -21,7 +21,7 @@ enum QuestionarieAPI: router {
     var url: URL?{
         get {
             switch self {
-            case .teste:
+            case .ID:
                 return URL(string: "\(hostname)/teste")
             }
         }

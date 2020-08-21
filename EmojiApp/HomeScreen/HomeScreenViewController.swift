@@ -34,6 +34,13 @@ class HomeScreenViewController: UIViewController {
               buttom.Card.fillColor = UIColor.white.cgColor
         return buttom
     }()
+    let label : UILabel = {
+        let label = UILabel()
+        label.text = "Bem-Vindo"
+        label.font = .systemFont(ofSize: 34, weight: UIFont.Weight.bold)
+        label.textColor = .white
+        return label
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,65 +51,49 @@ class HomeScreenViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        setWelcome()
         setCreateButtom()
         setAnswerButtom()
-        setWelcome()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        QuestionarieRepository().read(category: QuestionarieAPI.teste){
-            (ress) in
-            switch ress {
-            case .success(let questionariesRess):
-                print(questionariesRess)
-            case .failure(let err):
-                print(err)
-                return
-            }
-
-        }
     }
 
     
     override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         self.view.layer.sublayers?.first?.frame = self.view.bounds
     }
-
+    
+        
+func setWelcome(){
+            self.view.addSubview(label)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.topAnchor.constraint(equalToSystemSpacingBelow: self.view.topAnchor, multiplier: 10).isActive = true
+            label.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 17).isActive = true
+    }
     
     func setCreateButtom(){
         self.view.addSubview(createButton)
         createButton.translatesAutoresizingMaskIntoConstraints = false
         createButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        createButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 231).isActive = true
-        createButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        createButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
+        createButton.topAnchor.constraint(equalToSystemSpacingBelow: label.topAnchor, multiplier: 20).isActive = true
+        createButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.45).isActive = true
+        createButton.heightAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.4).isActive = true
         createButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goCreate)))
     }
-    
+
     func setAnswerButtom(){
            self.view.addSubview(answerButton)
            answerButton.translatesAutoresizingMaskIntoConstraints = false
-           answerButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-           answerButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 489).isActive = true
-        answerButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-            answerButton.heightAnchor.constraint(equalToConstant: 180).isActive = true
-        answerButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goAnswer)))
+        answerButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        answerButton.topAnchor.constraint(equalToSystemSpacingBelow: createButton.topAnchor, multiplier: 30).isActive = true
+       answerButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.45).isActive = true
+            answerButton.heightAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.40).isActive = true
+            answerButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goAnswer)))
 
 }
-    
-    func setWelcome(){
-        let label = UILabel()
-        label.text = "Bem-Vindo"
-        label.font = .systemFont(ofSize: 34, weight: UIFont.Weight.bold)
-        label.textColor = .white
-        self.view.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 91).isActive = true
-        label.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 17).isActive = true
-}
-    
+
     
      @objc func goAnswer() {
            let sampleStoryBoard : UIStoryboard = UIStoryboard(name: "Answer", bundle:nil)

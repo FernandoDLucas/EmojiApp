@@ -36,10 +36,10 @@ class RadioButton : UIButton {
     
     func changeButton(){
         if self.isSelected{
+            self.setImage(nil, for: .selected)
             self.setImage(#imageLiteral(resourceName: "checkmark"), for: .selected)
-            self.imageView?.contentMode = .scaleAspectFill
         } else{
-            self.backgroundColor = .calmBlue
+            self.setImage(nil, for: .selected)
         }
 }
 }
