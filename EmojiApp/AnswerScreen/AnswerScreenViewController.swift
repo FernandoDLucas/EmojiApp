@@ -22,6 +22,14 @@ class AnswerScreenViewController : UIViewController{
         return cv
     }()
     
+    let titleLabel : UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.font = .systemFont(ofSize: 34, weight: UIFont.Weight.bold)
+        titleLabel.textColor = .white
+        return titleLabel
+    }()
+    
     var textReturn : String? = nil {
         didSet{
             DispatchQueue.main.async{
@@ -37,14 +45,7 @@ class AnswerScreenViewController : UIViewController{
                }
            }
        }
-    
-    let titleLabel : UILabel = {
-        let titleLabel = UILabel()
-        titleLabel.textAlignment = .center
-        titleLabel.font = .systemFont(ofSize: 34, weight: UIFont.Weight.bold)
-        titleLabel.textColor = .white
-        return titleLabel
-    }()
+
     
     var questionResult : Questionarie? = nil {
         didSet{

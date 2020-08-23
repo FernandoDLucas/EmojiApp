@@ -36,7 +36,13 @@ class HomeScreenViewController: UIViewController {
     }()
     let label : UILabel = {
         let label = UILabel()
-        label.text = "Bem-Vindo"
+        let welcomeMessage = UserDefaults.standard.bool(forKey: "AlreadyOpen")
+        if welcomeMessage {
+        label.text = "Bem-Vindo de volta"
+        } else
+        {
+            label.text = "Bem-Vindo"
+        }
         label.font = .systemFont(ofSize: 34, weight: UIFont.Weight.bold)
         label.textColor = .white
         return label
@@ -91,7 +97,6 @@ func setWelcome(){
        answerButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.45).isActive = true
             answerButton.heightAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.40).isActive = true
             answerButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goAnswer)))
-
 }
 
     

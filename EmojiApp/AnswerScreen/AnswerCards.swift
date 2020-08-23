@@ -85,17 +85,4 @@ class AnswerCards : UICollectionViewCell {
 
      
     }
-    
-//
-//    emojisView.translatesAutoresizingMaskIntoConstraints = false
-//           emojisView.bottomAnchor.constraint(equalTo: label.bottomAnchor, constant: 7).isActive = true
-//           emojisView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 36).isActive = true
-//           emojisView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.12).isActive = true
-//           emojisView.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 17).isActive = true
-//           emojisView.arrangedSubviews.forEach {
-//               $0.translatesAutoresizingMaskIntoConstraints = false
-//               $0.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.12).isActive = true
-//               $0.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.12).isActive = true
-//           }
-//       }
 }

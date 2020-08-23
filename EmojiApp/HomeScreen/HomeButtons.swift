@@ -8,7 +8,14 @@
 
 import UIKit
 
-class HomeButtons : UIView {
+class HomeButtons : UIButton {
+    
+    override var isHighlighted: Bool {
+        didSet {
+            self.Card.shadowColor =  isHighlighted ? UIColor.calmPink.cgColor : (isSelected ? UIColor.calmPink.cgColor : UIColor.black.cgColor)
+        }
+    }
+    
     
     let label : UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 172, height: 33))
@@ -18,12 +25,12 @@ class HomeButtons : UIView {
     let Card : CAShapeLayer = {
           let layer = CAShapeLayer()
         let circularPath = UIBezierPath( roundedRect: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * 0.45 , height: UIScreen.main.bounds.width * 0.40),
-                       cornerRadius: 10)
+                       cornerRadius: 20)
           layer.path = circularPath.cgPath
           layer.lineCap = .round
         layer.shadowPath = circularPath.cgPath
         layer.shadowRadius = 6
-        layer.shadowOpacity = 0.2
+        layer.shadowOpacity = 0.4
         layer.shadowOffset = .zero
         return layer
       }()
@@ -53,7 +60,7 @@ class HomeButtons : UIView {
             self.addSubview(label)
             self.addSubview(image)
        }
-    
+
     func setupConstraints(){
         label.translatesAutoresizingMaskIntoConstraints = false
         label.topAnchor.constraint(equalToSystemSpacingBelow: self.topAnchor, multiplier: 4).isActive = true

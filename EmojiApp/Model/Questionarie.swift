@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct Questionarie : Decodable, Encodable{
+public struct Questionarie : Codable{
    
     var ID : Int?
     var title : String?
@@ -24,7 +24,7 @@ public struct Questionarie : Decodable, Encodable{
        }
 }
 
-public struct Question : Decodable, Encodable {
+public struct Question : Codable {
     
     var emojiOptions : [EmojiOptions]
     var numberOfQuestion : Int
@@ -37,7 +37,7 @@ public struct Question : Decodable, Encodable {
        }
 }
 
-public struct EmojiOptions : Decodable, Encodable{
+public struct EmojiOptions : Codable{
     
     var emoji3 : String
     var emoji4 : String
