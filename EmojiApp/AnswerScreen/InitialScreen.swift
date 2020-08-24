@@ -98,7 +98,6 @@ extension InitialAnswerScreenViewController : UITableViewDataSource, UITableView
         let switchButton = UISwitch(frame: .zero)
         switchButton.tag = indexPath.row
         cell.accessoryView = switchButton
-    
         return cell
     }
     

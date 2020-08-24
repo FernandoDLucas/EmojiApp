@@ -83,7 +83,7 @@ func setWelcome(){
         self.view.addSubview(createButton)
         createButton.translatesAutoresizingMaskIntoConstraints = false
         createButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        createButton.topAnchor.constraint(equalToSystemSpacingBelow: label.topAnchor, multiplier: 20).isActive = true
+        createButton.topAnchor.constraint(equalToSystemSpacingBelow: label.topAnchor, multiplier: 15).isActive = true
         createButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.45).isActive = true
         createButton.heightAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.4).isActive = true
         createButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goCreate)))
