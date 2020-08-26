@@ -64,6 +64,7 @@ class AnswerScreenViewController : UIViewController{
         setCollectionView()
         collectionView.delegate = self
         collectionView.dataSource = self
+
         APIHandler()
         
     }

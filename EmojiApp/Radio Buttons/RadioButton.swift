@@ -23,6 +23,7 @@ class RadioButton : UIButton {
         super.init(frame: frame)
         setButton()
     }
+    
     func setButton(){
      self.backgroundColor = .calmBlue
         self.changeButton()
@@ -36,10 +37,11 @@ class RadioButton : UIButton {
     
     func changeButton(){
         if self.isSelected{
-            self.setImage(nil, for: .selected)
-            self.setImage(#imageLiteral(resourceName: "checkmark"), for: .selected)
-        } else{
-            self.setImage(nil, for: .selected)
+            self.setImage(nil, for: .normal)
+            self.setImage(#imageLiteral(resourceName: "checkmark"), for: .normal)
+        }else{
+            self.setImage(nil, for: .normal)
         }
 }
+    
 }

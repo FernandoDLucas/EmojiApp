@@ -34,6 +34,7 @@ class HomeScreenViewController: UIViewController {
               buttom.Card.fillColor = UIColor.white.cgColor
         return buttom
     }()
+    
     let label : UILabel = {
         let label = UILabel()
         let welcomeMessage = UserDefaults.standard.bool(forKey: "AlreadyOpen")
@@ -47,6 +48,12 @@ class HomeScreenViewController: UIViewController {
         label.textColor = .white
         return label
     }()
+    
+    var welcomeTeste : String = "Bem-Vindo"{
+         didSet{
+            self.welcomeTeste = UserDefaults.standard.bool(forKey: "AlreadyOpen") ? "Bem-Vindo" : "Bem-Vindo de volta"
+         }
+     }
     
     override func viewDidLoad() {
         super.viewDidLoad()

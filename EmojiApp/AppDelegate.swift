@@ -12,9 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        UserDefaults.standard.set(1, forKey: "AlreadyOpen")
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        UserDefaults.standard.set(true, forKey: "AlreadyOpen")
     }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
