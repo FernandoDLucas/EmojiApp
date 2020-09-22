@@ -23,6 +23,7 @@ class RadioButton : UIButton {
         super.init(frame: frame)
         setButton()
     }
+    
     func setButton(){
      self.backgroundColor = .calmBlue
         self.changeButton()

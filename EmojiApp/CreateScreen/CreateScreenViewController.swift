@@ -10,38 +10,92 @@ import UIKit
 
 class CreateScreenViewController : UIViewController{
     
+    var numberofQuestions : [String] =  [] {
+        didSet{
+            self.collectionView.reloadData()
+        }
+    }
+    
+    weak var delegate : creatingDelegate?
     
     let secondBackground = FirstBackgroundGradient()
-    let labelId : UITextField = {
-        let labelId = UITextField()
-        labelId.placeholder = "Título do Questionário"
-        labelId.backgroundColor = .white
-        labelId.textAlignment = .center
-        return labelId
+    
+    let collectionView : UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 20
+        layout.minimumLineSpacing = 20
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.register(CreatingCards.self, forCellWithReuseIdentifier: "CreatingCell")
+        cv.showsHorizontalScrollIndicator = false
+        cv.backgroundColor = .clear 
+        return cv
     }()
     
+    let addButton : UIButton = {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "addquestion icon "), for: .normal)
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let backgroundLayer = secondBackground.gl
         backgroundLayer.frame = self.view.bounds
-        let saveButton = UIBarButtonItem(title: "Salvar", style: .done, target: self, action: #selector(teste))
-        self.navigationItem.rightBarButtonItem = saveButton
         self.view.layer.addSublayer(backgroundLayer)
-        setIdTextField()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        setCollectionView()
+        setButton()
     }
     
-    func setIdTextField(){
-        self.view.addSubview(labelId)
-        labelId.translatesAutoresizingMaskIntoConstraints = false
-        labelId.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 160).isActive = true
-        labelId.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        labelId.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        
+    func setCollectionView() {
+        self.view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.topAnchor.constraint(equalToSystemSpacingBelow: self.view.topAnchor, multiplier: 20).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo:self.view.leadingAnchor, constant: 17).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo:self.view.trailingAnchor, constant: 17).isActive = true
+        collectionView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        collectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.29).isActive = true
     }
     
-    @objc func teste(){
-        print("deu bom")
+    func setButton(){
+        self.view.addSubview(addButton)
+        addButton.translatesAutoresizingMaskIntoConstraints = false
+        addButton.topAnchor.constraint(equalToSystemSpacingBelow: collectionView.bottomAnchor, multiplier: 4).isActive = true
+        addButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        addButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        addButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        addButton.addTarget(self, action: #selector(teste2), for: .touchUpInside)
+
     }
     
+    @IBAction func teste2(sender: UIButton){
+        numberofQuestions.append("+1")
+    }
+    
+    @IBAction func removeQuestion(sender: UIButton) {
+        numberofQuestions.remove(at: sender.tag)
+    }
+}
+
+extension CreateScreenViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.height)
+      }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+}
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numberofQuestions.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CreatingCell", for: indexPath) as! CreatingCards
+        cell.cancelButton.tag = indexPath.row
+        cell.cancelButton.addTarget(self, action: #selector(removeQuestion), for: .touchUpInside)
+        return cell
+}
 }

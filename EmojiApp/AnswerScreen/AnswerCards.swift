@@ -82,7 +82,5 @@ class AnswerCards : UICollectionViewCell {
         buttons.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         buttons.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 36).isActive = true
         buttons.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.1).isActive = true
-
-     
     }
 }
