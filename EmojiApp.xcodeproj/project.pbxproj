@@ -152,6 +152,36 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		EC53A1AA2524C7F9006A5104 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3FF7024E8235F00CEF33F /* Radio Buttons */,
+				ECF6502925017D1000470256 /* Data Screen */,
+				ECE3FF5924E2E2D700CEF33F /* HomeScreen */,
+				ECE3FF6924E60B1F00CEF33F /* CreateScreen */,
+				ECE3FF6324E560B100CEF33F /* AnswerScreen */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC53A1AB2524C82D006A5104 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3FF5C24E2E37E00CEF33F /* Colors */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EC53A1AC2524C83C006A5104 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3FF6624E5658100CEF33F /* Answer.storyboard */,
+				ECE3FF6C24E60C5700CEF33F /* Create.storyboard */,
+				ECE3FF2F24E2E11000CEF33F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ECE3FF1D24E2E11000CEF33F = {
 			isa = PBXGroup;
 			children = (
@@ -175,24 +205,18 @@
 		ECE3FF2824E2E11000CEF33F /* EmojiApp */ = {
 			isa = PBXGroup;
 			children = (
-				ECF6502925017D1000470256 /* Data Screen */,
+				EC53A1AC2524C83C006A5104 /* View */,
+				EC53A1AB2524C82D006A5104 /* Shared */,
+				EC53A1AA2524C7F9006A5104 /* Controller */,
 				EC31409C24EC98110044EE88 /* Repositories */,
 				EC31409524EC92ED0044EE88 /* Services */,
 				EC31409224EC83D20044EE88 /* Model */,
-				ECE3FF7024E8235F00CEF33F /* Radio Buttons */,
-				ECE3FF6924E60B1F00CEF33F /* CreateScreen */,
-				ECE3FF6324E560B100CEF33F /* AnswerScreen */,
-				ECE3FF5C24E2E37E00CEF33F /* Colors */,
-				ECE3FF5924E2E2D700CEF33F /* HomeScreen */,
 				ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */,
 				ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */,
 				ECE3FF2D24E2E11000CEF33F /* ViewController.swift */,
-				ECE3FF2F24E2E11000CEF33F /* Main.storyboard */,
 				ECE3FF3224E2E11300CEF33F /* Assets.xcassets */,
 				ECE3FF3424E2E11300CEF33F /* LaunchScreen.storyboard */,
 				ECE3FF3724E2E11300CEF33F /* Info.plist */,
-				ECE3FF6624E5658100CEF33F /* Answer.storyboard */,
-				ECE3FF6C24E60C5700CEF33F /* Create.storyboard */,
 			);
 			path = EmojiApp;
 			sourceTree = "<group>";
