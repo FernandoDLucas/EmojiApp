@@ -23,29 +23,32 @@ class ModelCK {
         privateDB = container.privateCloudDatabase
     }
     
-    @objc func refresh (_ completion: @escaping (Error?) -> Void ) {
+     func refresh (_ completion: @escaping (Result<[QuestionarieCK], Error>) -> Void ) {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Questionarie", predicate: predicate)
         Questionaries(forQuery: query, completion)
     }
     
-    private func Questionaries(forQuery query: CKQuery, _ completion: @escaping (Error?) -> Void){
+    private func Questionaries(forQuery query: CKQuery, _ completion: @escaping (Result<[QuestionarieCK], Error>) -> Void){
         publicDB.perform(query, inZoneWith: CKRecordZone.default().zoneID) { [weak self] results, errors in
             guard let self = self else {return}
             if let error = errors {
-                
                 DispatchQueue.main.async {
-                    completion(error)
+                    completion(.failure(error))
                 }
                 return
             }
             guard let result = results else { return }
-            self.Questionaries = result.compactMap{
-                QuestionarieCK(record: $0, database : self.publicDB)
-                
+            
+//            self.Questionaries = result.compactMap{
+//                QuestionarieCK(record: $0, database : self.publicDB)
+//            }
+            let questionaries = result.compactMap{
+                    QuestionarieCK(record: $0, database : self.publicDB)
             }
+            
             DispatchQueue.main.async {
-                completion(nil)
+                completion(.success(questionaries))
             }
         }
     }

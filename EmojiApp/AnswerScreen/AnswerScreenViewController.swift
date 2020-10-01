@@ -47,13 +47,13 @@ class AnswerScreenViewController : UIViewController{
        }
 
 //
-//    var questionResult : Questionarie? = nil {
-//        didSet{
-//            DispatchQueue.main.async {
-//                self.collectionView.reloadData()
-//            }
-//        }
-//    }
+    var questionResult : [QuestionarieCK?] = [] {
+        didSet{
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,7 @@ class AnswerScreenViewController : UIViewController{
         setCollectionView()
         collectionView.delegate = self
         collectionView.dataSource = self
-
+        cloudkitHandler()
        // APIHandler()
         
     }
@@ -95,6 +95,21 @@ class AnswerScreenViewController : UIViewController{
         collectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.39).isActive = true
     }
     
+    func cloudkitHandler() {
+        ModelCK.currentModel.refresh{ response in
+            switch response {
+            case .success(let data):
+                self.questionResult = data
+                print(self.questionResult)
+            case . failure(let error):
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+        }
+        
+    }
 //    func APIHandler() {
 //        QuestionarieRepository().read(category: QuestionarieAPI.ID){
 //            (ress) in

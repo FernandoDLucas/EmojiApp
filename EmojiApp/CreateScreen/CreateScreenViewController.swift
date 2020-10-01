@@ -43,14 +43,6 @@ class CreateScreenViewController : UIViewController{
         collectionView.dataSource = self
         setIdTextField()
         setCollectionView()
-        ModelCK.currentModel.refresh{ error in
-            if let error = error {
-              let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-              self.present(alert, animated: true, completion: nil)
-              return
-            }
-          }
     }
     
     func setIdTextField(){
