@@ -46,14 +46,14 @@ class AnswerScreenViewController : UIViewController{
            }
        }
 
-    
-    var questionResult : Questionarie? = nil {
-        didSet{
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
+//
+//    var questionResult : Questionarie? = nil {
+//        didSet{
+//            DispatchQueue.main.async {
+//                self.collectionView.reloadData()
+//            }
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ class AnswerScreenViewController : UIViewController{
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        APIHandler()
+       // APIHandler()
         
     }
     
@@ -95,21 +95,21 @@ class AnswerScreenViewController : UIViewController{
         collectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.39).isActive = true
     }
     
-    func APIHandler() {
-        QuestionarieRepository().read(category: QuestionarieAPI.ID){
-            (ress) in
-            switch ress {
-            case .success(let questionariesRess):
-                print(questionariesRess)
-                self.questionResult = questionariesRess
-                self.textReturn = questionariesRess.title
-                self.listOfQuestion = questionariesRess.questions
-            case .failure(let err):
-                print(err)
-                return
-            }
-        }
-    }
+//    func APIHandler() {
+//        QuestionarieRepository().read(category: QuestionarieAPI.ID){
+//            (ress) in
+//            switch ress {
+//            case .success(let questionariesRess):
+//                print(questionariesRess)
+//                self.questionResult = questionariesRess
+//                self.textReturn = questionariesRess.title
+//                self.listOfQuestion = questionariesRess.questions
+//            case .failure(let err):
+//                print(err)
+//                return
+//            }
+//        }
+//    }
     
 }
 
