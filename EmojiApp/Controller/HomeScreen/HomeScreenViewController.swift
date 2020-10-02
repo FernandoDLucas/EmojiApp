@@ -114,8 +114,8 @@ func setWelcome(){
     }
     
     @objc func goCreate() {
-              let sampleStoryBoard : UIStoryboard = UIStoryboard(name: "Create", bundle:nil)
-              let answerView  = sampleStoryBoard.instantiateViewController(withIdentifier: "CreateScreenViewController") as! CreateScreenViewController
-           self.navigationController?.pushViewController(answerView, animated: true)
+
+           self.navigationController?.pushViewController(InitialCreateScreenViewController(), animated: true)
        }
+    
 }

@@ -110,21 +110,6 @@ class AnswerScreenViewController : UIViewController{
         }
         
     }
-//    func APIHandler() {
-//        QuestionarieRepository().read(category: QuestionarieAPI.ID){
-//            (ress) in
-//            switch ress {
-//            case .success(let questionariesRess):
-//                print(questionariesRess)
-//                self.questionResult = questionariesRess
-//                self.textReturn = questionariesRess.title
-//                self.listOfQuestion = questionariesRess.questions
-//            case .failure(let err):
-//                print(err)
-//                return
-//            }
-//        }
-//    }
     
 }
 

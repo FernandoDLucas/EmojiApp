@@ -20,9 +20,11 @@
 		EC33917324F0394C00CCE5DA /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33917224F0394C00CCE5DA /* FileController.swift */; };
 		EC464AA624F1F47A00F85930 /* ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC464AA524F1F47A00F85930 /* ServiceTest.swift */; };
 		EC49136124F3EB3500626724 /* CreatingCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49136024F3EB3500626724 /* CreatingCards.swift */; };
+		EC4FF4BF24FEC5D400C1E0BD /* InitialCreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FF4BE24FEC5D400C1E0BD /* InitialCreateScreen.swift */; };
+		EC535DDE25279D6F007287EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC535DDD25279D6F007287EC /* SceneDelegate.swift */; };
+		EC761D1324F7E3B7006B13E1 /* CreatingCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC761D1224F7E3B7006B13E1 /* CreatingCards.swift */; };
 		ECCD4E7D24ED6D3F006765BA /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD4E7C24ED6D3F006765BA /* InitialScreen.swift */; };
 		ECE3FF2A24E2E11000CEF33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */; };
-		ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */; };
 		ECE3FF2E24E2E11000CEF33F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2D24E2E11000CEF33F /* ViewController.swift */; };
 		ECE3FF3124E2E11000CEF33F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE3FF2F24E2E11000CEF33F /* Main.storyboard */; };
 		ECE3FF3324E2E11300CEF33F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE3FF3224E2E11300CEF33F /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		ECE3FF6F24E6BCEA00CEF33F /* AnswerCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */; };
 		ECE3FF7224E8237D00CEF33F /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF7124E8237D00CEF33F /* RadioButton.swift */; };
 		ECE3FF7524E95EF700CEF33F /* RadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF7424E95EF700CEF33F /* RadioButtonsController.swift */; };
+		ECF6502B25017D2500470256 /* InitialDataScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6502A25017D2500470256 /* InitialDataScreen.swift */; };
+		ECF6502D25017D6A00470256 /* DataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6502C25017D6A00470256 /* DataCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +78,12 @@
 		EC33917224F0394C00CCE5DA /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
 		EC464AA524F1F47A00F85930 /* ServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTest.swift; sourceTree = "<group>"; };
 		EC49136024F3EB3500626724 /* CreatingCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingCards.swift; sourceTree = "<group>"; };
+		EC4FF4BE24FEC5D400C1E0BD /* InitialCreateScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialCreateScreen.swift; sourceTree = "<group>"; };
+		EC535DDD25279D6F007287EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC761D1224F7E3B7006B13E1 /* CreatingCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingCards.swift; sourceTree = "<group>"; };
 		ECCD4E7C24ED6D3F006765BA /* InitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
 		ECE3FF2624E2E11000CEF33F /* EmojiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ECE3FF2D24E2E11000CEF33F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECE3FF3024E2E11000CEF33F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECE3FF3224E2E11300CEF33F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 		ECE3FF6E24E6BCEA00CEF33F /* AnswerCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCards.swift; sourceTree = "<group>"; };
 		ECE3FF7124E8237D00CEF33F /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		ECE3FF7424E95EF700CEF33F /* RadioButtonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonsController.swift; sourceTree = "<group>"; };
+		ECF6502A25017D2500470256 /* InitialDataScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDataScreen.swift; sourceTree = "<group>"; };
+		ECF6502C25017D6A00470256 /* DataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +183,36 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		EC53A1AA2524C7F9006A5104 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3FF7024E8235F00CEF33F /* Radio Buttons */,
+				ECF6502925017D1000470256 /* Data Screen */,
+				ECE3FF5924E2E2D700CEF33F /* HomeScreen */,
+				ECE3FF6924E60B1F00CEF33F /* CreateScreen */,
+				ECE3FF6324E560B100CEF33F /* AnswerScreen */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC53A1AB2524C82D006A5104 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3FF5C24E2E37E00CEF33F /* Colors */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EC53A1AC2524C83C006A5104 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3FF6624E5658100CEF33F /* Answer.storyboard */,
+				ECE3FF6C24E60C5700CEF33F /* Create.storyboard */,
+				ECE3FF2F24E2E11000CEF33F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ECE3FF1D24E2E11000CEF33F = {
 			isa = PBXGroup;
 			children = (
@@ -200,22 +238,18 @@
 			isa = PBXGroup;
 			children = (
 				EC2220B6252625CA008BFC96 /* EmojiApp.entitlements */,
+				EC53A1AC2524C83C006A5104 /* View */,
+				EC53A1AB2524C82D006A5104 /* Shared */,
+				EC53A1AA2524C7F9006A5104 /* Controller */,
 				EC31409C24EC98110044EE88 /* Repositories */,
 				EC31409524EC92ED0044EE88 /* Services */,
 				EC31409224EC83D20044EE88 /* Model */,
-				ECE3FF7024E8235F00CEF33F /* Radio Buttons */,
-				ECE3FF6924E60B1F00CEF33F /* CreateScreen */,
-				ECE3FF6324E560B100CEF33F /* AnswerScreen */,
-				ECE3FF5C24E2E37E00CEF33F /* Colors */,
-				ECE3FF5924E2E2D700CEF33F /* HomeScreen */,
 				ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */,
 				ECE3FF2D24E2E11000CEF33F /* ViewController.swift */,
-				ECE3FF2F24E2E11000CEF33F /* Main.storyboard */,
 				ECE3FF3224E2E11300CEF33F /* Assets.xcassets */,
 				ECE3FF3424E2E11300CEF33F /* LaunchScreen.storyboard */,
 				ECE3FF3724E2E11300CEF33F /* Info.plist */,
-				ECE3FF6624E5658100CEF33F /* Answer.storyboard */,
-				ECE3FF6C24E60C5700CEF33F /* Create.storyboard */,
+				EC535DDD25279D6F007287EC /* SceneDelegate.swift */,
 			);
 			path = EmojiApp;
 			sourceTree = "<group>";
@@ -243,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				ECE3FF5A24E2E2FD00CEF33F /* HomeScreenViewController.swift */,
-				ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */,
 				ECE3FF5F24E4243900CEF33F /* HomeButtons.swift */,
 			);
 			path = HomeScreen;
@@ -273,6 +306,8 @@
 			children = (
 				ECE3FF6A24E60B6700CEF33F /* CreateScreenViewController.swift */,
 				EC49136024F3EB3500626724 /* CreatingCards.swift */,
+				EC761D1224F7E3B7006B13E1 /* CreatingCards.swift */,
+				EC4FF4BE24FEC5D400C1E0BD /* InitialCreateScreen.swift */,
 			);
 			path = CreateScreen;
 			sourceTree = "<group>";
@@ -284,6 +319,15 @@
 				ECE3FF7424E95EF700CEF33F /* RadioButtonsController.swift */,
 			);
 			path = "Radio Buttons";
+			sourceTree = "<group>";
+		};
+		ECF6502925017D1000470256 /* Data Screen */ = {
+			isa = PBXGroup;
+			children = (
+				ECF6502A25017D2500470256 /* InitialDataScreen.swift */,
+				ECF6502C25017D6A00470256 /* DataCard.swift */,
+			);
+			path = "Data Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,19 +472,23 @@
 				ECE3FF6524E560DC00CEF33F /* AnswerScreenViewController.swift in Sources */,
 				ECCD4E7D24ED6D3F006765BA /* InitialScreen.swift in Sources */,
 				ECE3FF7224E8237D00CEF33F /* RadioButton.swift in Sources */,
+				EC4FF4BF24FEC5D400C1E0BD /* InitialCreateScreen.swift in Sources */,
 				ECE3FF2A24E2E11000CEF33F /* AppDelegate.swift in Sources */,
 				EC31409424EC83E40044EE88 /* Questionarie.swift in Sources */,
 				EC31409B24EC96750044EE88 /* Router.swift in Sources */,
 				ECE3FF7524E95EF700CEF33F /* RadioButtonsController.swift in Sources */,
 				EC49136124F3EB3500626724 /* CreatingCards.swift in Sources */,
+				EC535DDE25279D6F007287EC /* SceneDelegate.swift in Sources */,
+				EC761D1324F7E3B7006B13E1 /* CreatingCards.swift in Sources */,
 				EC31409724EC94C50044EE88 /* HTTP.swift in Sources */,
 				ECE3FF6024E4243900CEF33F /* HomeButtons.swift in Sources */,
 				EC2220AF25261FDD008BFC96 /* QuestionarieModel.swift in Sources */,
 				EC33917124F0391600CCE5DA /* DataManager.swift in Sources */,
 				EC31409924EC96400044EE88 /* QuestionarieAPI.swift in Sources */,
-				ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */,
 				EC2220AA25261C35008BFC96 /* Model.swift in Sources */,
 				EC2220CA25264B5B008BFC96 /* Questions.swift in Sources */,
+				ECF6502B25017D2500470256 /* InitialDataScreen.swift in Sources */,
+				ECF6502D25017D6A00470256 /* DataCard.swift in Sources */,
 				ECE3FF6B24E60B6700CEF33F /* CreateScreenViewController.swift in Sources */,
 				ECE3FF6F24E6BCEA00CEF33F /* AnswerCards.swift in Sources */,
 			);

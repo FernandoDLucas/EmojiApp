@@ -29,8 +29,8 @@ class HomeButtons : UIButton {
           layer.path = circularPath.cgPath
           layer.lineCap = .round
         layer.shadowPath = circularPath.cgPath
-        layer.shadowRadius = 6
-        layer.shadowOpacity = 0.4
+        layer.shadowRadius = 2
+        layer.shadowOpacity = 0.2
         layer.shadowOffset = .zero
         return layer
       }()

@@ -99,7 +99,4 @@ extension InitialAnswerScreenViewController : UITableViewDataSource, UITableView
         cell.accessoryView = switchButton
         return cell
     }
-    
-
-
 }

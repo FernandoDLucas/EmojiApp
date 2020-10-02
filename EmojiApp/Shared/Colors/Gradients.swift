@@ -36,3 +36,16 @@ class SecBackgroundGradient{
        }
 }
 
+class dataBackgroundGradient{
+    var gl : CAGradientLayer
+
+    init(){
+        let colorTop = UIColor(red: 156.0 / 255.0, green: 244.0 / 255.0, blue: 216.0 / 255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 160.0 / 255.0, green: 167.0 / 255.0, blue: 245.0 / 255.0, alpha: 1.0).cgColor
+
+        self.gl = CAGradientLayer()
+        self.gl.colors = [colorTop, colorBottom]
+        self.gl.locations = [0.0, 1.0]
+    }
+}
+
