@@ -46,8 +46,8 @@ class AnswerScreenViewController : UIViewController{
            }
        }
 
-    
-    var questionResult : Questionarie? = nil {
+//
+    var questionResult : [QuestionarieCK?] = [] {
         didSet{
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -64,7 +64,8 @@ class AnswerScreenViewController : UIViewController{
         setCollectionView()
         collectionView.delegate = self
         collectionView.dataSource = self
-        APIHandler()
+        cloudkitHandler()
+       // APIHandler()
         
     }
     
@@ -94,20 +95,20 @@ class AnswerScreenViewController : UIViewController{
         collectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.39).isActive = true
     }
     
-    func APIHandler() {
-        QuestionarieRepository().read(category: QuestionarieAPI.ID){
-            (ress) in
-            switch ress {
-            case .success(let questionariesRess):
-                print(questionariesRess)
-                self.questionResult = questionariesRess
-                self.textReturn = questionariesRess.title
-                self.listOfQuestion = questionariesRess.questions
-            case .failure(let err):
-                print(err)
+    func cloudkitHandler() {
+        ModelCK.currentModel.refresh{ response in
+            switch response {
+            case .success(let data):
+                self.questionResult = data
+                print(self.questionResult)
+            case . failure(let error):
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 return
             }
         }
+        
     }
     
 }

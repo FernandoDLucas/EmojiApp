@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2220AA25261C35008BFC96 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2220A925261C35008BFC96 /* Model.swift */; };
+		EC2220AF25261FDD008BFC96 /* QuestionarieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2220AE25261FDD008BFC96 /* QuestionarieModel.swift */; };
+		EC2220BC252625CE008BFC96 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2220BB252625CE008BFC96 /* CloudKit.framework */; };
+		EC2220CA25264B5B008BFC96 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2220C925264B5B008BFC96 /* Questions.swift */; };
 		EC31409424EC83E40044EE88 /* Questionarie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409324EC83E40044EE88 /* Questionarie.swift */; };
 		EC31409724EC94C50044EE88 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409624EC94C50044EE88 /* HTTP.swift */; };
 		EC31409924EC96400044EE88 /* QuestionarieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31409824EC96400044EE88 /* QuestionarieAPI.swift */; };
@@ -15,11 +19,12 @@
 		EC33917124F0391600CCE5DA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33917024F0391600CCE5DA /* DataManager.swift */; };
 		EC33917324F0394C00CCE5DA /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33917224F0394C00CCE5DA /* FileController.swift */; };
 		EC464AA624F1F47A00F85930 /* ServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC464AA524F1F47A00F85930 /* ServiceTest.swift */; };
+		EC49136124F3EB3500626724 /* CreatingCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49136024F3EB3500626724 /* CreatingCards.swift */; };
 		EC4FF4BF24FEC5D400C1E0BD /* InitialCreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FF4BE24FEC5D400C1E0BD /* InitialCreateScreen.swift */; };
+		EC535DDE25279D6F007287EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC535DDD25279D6F007287EC /* SceneDelegate.swift */; };
 		EC761D1324F7E3B7006B13E1 /* CreatingCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC761D1224F7E3B7006B13E1 /* CreatingCards.swift */; };
 		ECCD4E7D24ED6D3F006765BA /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD4E7C24ED6D3F006765BA /* InitialScreen.swift */; };
 		ECE3FF2A24E2E11000CEF33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */; };
-		ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */; };
 		ECE3FF2E24E2E11000CEF33F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3FF2D24E2E11000CEF33F /* ViewController.swift */; };
 		ECE3FF3124E2E11000CEF33F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE3FF2F24E2E11000CEF33F /* Main.storyboard */; };
 		ECE3FF3324E2E11300CEF33F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE3FF3224E2E11300CEF33F /* Assets.xcassets */; };
@@ -59,6 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC2220A925261C35008BFC96 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EC2220AE25261FDD008BFC96 /* QuestionarieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionarieModel.swift; sourceTree = "<group>"; };
+		EC2220B6252625CA008BFC96 /* EmojiApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmojiApp.entitlements; sourceTree = "<group>"; };
+		EC2220BB252625CE008BFC96 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EC2220C925264B5B008BFC96 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		EC31409324EC83E40044EE88 /* Questionarie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionarie.swift; sourceTree = "<group>"; };
 		EC31409624EC94C50044EE88 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		EC31409824EC96400044EE88 /* QuestionarieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionarieAPI.swift; sourceTree = "<group>"; };
@@ -67,12 +77,13 @@
 		EC33917024F0391600CCE5DA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EC33917224F0394C00CCE5DA /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
 		EC464AA524F1F47A00F85930 /* ServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTest.swift; sourceTree = "<group>"; };
+		EC49136024F3EB3500626724 /* CreatingCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingCards.swift; sourceTree = "<group>"; };
 		EC4FF4BE24FEC5D400C1E0BD /* InitialCreateScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialCreateScreen.swift; sourceTree = "<group>"; };
+		EC535DDD25279D6F007287EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC761D1224F7E3B7006B13E1 /* CreatingCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingCards.swift; sourceTree = "<group>"; };
 		ECCD4E7C24ED6D3F006765BA /* InitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
 		ECE3FF2624E2E11000CEF33F /* EmojiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ECE3FF2D24E2E11000CEF33F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECE3FF3024E2E11000CEF33F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECE3FF3224E2E11300CEF33F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2220BC252625CE008BFC96 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,9 +136,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC2220A825261C26008BFC96 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				EC2220A925261C35008BFC96 /* Model.swift */,
+				EC2220AE25261FDD008BFC96 /* QuestionarieModel.swift */,
+				EC2220C925264B5B008BFC96 /* Questions.swift */,
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
+		EC2220BA252625CE008BFC96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC2220BB252625CE008BFC96 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC31409224EC83D20044EE88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC2220A825261C26008BFC96 /* CloudKit */,
 				EC31409324EC83E40044EE88 /* Questionarie.swift */,
 			);
 			path = Model;
@@ -189,6 +220,7 @@
 				ECE3FF3F24E2E11400CEF33F /* EmojiAppTests */,
 				ECE3FF4A24E2E11400CEF33F /* EmojiAppUITests */,
 				ECE3FF2724E2E11000CEF33F /* Products */,
+				EC2220BA252625CE008BFC96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +237,7 @@
 		ECE3FF2824E2E11000CEF33F /* EmojiApp */ = {
 			isa = PBXGroup;
 			children = (
+				EC2220B6252625CA008BFC96 /* EmojiApp.entitlements */,
 				EC53A1AC2524C83C006A5104 /* View */,
 				EC53A1AB2524C82D006A5104 /* Shared */,
 				EC53A1AA2524C7F9006A5104 /* Controller */,
@@ -212,11 +245,11 @@
 				EC31409524EC92ED0044EE88 /* Services */,
 				EC31409224EC83D20044EE88 /* Model */,
 				ECE3FF2924E2E11000CEF33F /* AppDelegate.swift */,
-				ECE3FF2B24E2E11000CEF33F /* SceneDelegate.swift */,
 				ECE3FF2D24E2E11000CEF33F /* ViewController.swift */,
 				ECE3FF3224E2E11300CEF33F /* Assets.xcassets */,
 				ECE3FF3424E2E11300CEF33F /* LaunchScreen.storyboard */,
 				ECE3FF3724E2E11300CEF33F /* Info.plist */,
+				EC535DDD25279D6F007287EC /* SceneDelegate.swift */,
 			);
 			path = EmojiApp;
 			sourceTree = "<group>";
@@ -272,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				ECE3FF6A24E60B6700CEF33F /* CreateScreenViewController.swift */,
+				EC49136024F3EB3500626724 /* CreatingCards.swift */,
 				EC761D1224F7E3B7006B13E1 /* CreatingCards.swift */,
 				EC4FF4BE24FEC5D400C1E0BD /* InitialCreateScreen.swift */,
 			);
@@ -443,12 +477,16 @@
 				EC31409424EC83E40044EE88 /* Questionarie.swift in Sources */,
 				EC31409B24EC96750044EE88 /* Router.swift in Sources */,
 				ECE3FF7524E95EF700CEF33F /* RadioButtonsController.swift in Sources */,
+				EC49136124F3EB3500626724 /* CreatingCards.swift in Sources */,
+				EC535DDE25279D6F007287EC /* SceneDelegate.swift in Sources */,
 				EC761D1324F7E3B7006B13E1 /* CreatingCards.swift in Sources */,
 				EC31409724EC94C50044EE88 /* HTTP.swift in Sources */,
 				ECE3FF6024E4243900CEF33F /* HomeButtons.swift in Sources */,
+				EC2220AF25261FDD008BFC96 /* QuestionarieModel.swift in Sources */,
 				EC33917124F0391600CCE5DA /* DataManager.swift in Sources */,
 				EC31409924EC96400044EE88 /* QuestionarieAPI.swift in Sources */,
-				ECE3FF2C24E2E11000CEF33F /* SceneDelegate.swift in Sources */,
+				EC2220AA25261C35008BFC96 /* Model.swift in Sources */,
+				EC2220CA25264B5B008BFC96 /* Questions.swift in Sources */,
 				ECF6502B25017D2500470256 /* InitialDataScreen.swift in Sources */,
 				ECF6502D25017D6A00470256 /* DataCard.swift in Sources */,
 				ECE3FF6B24E60B6700CEF33F /* CreateScreenViewController.swift in Sources */,
@@ -626,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EmojiApp/EmojiApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YBM22U9FU3;
 				INFOPLIST_FILE = EmojiApp/Info.plist;
@@ -633,7 +672,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Fernando-de-Lucas.EmojiApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fernando-de-Lucas.EmojiApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -644,6 +683,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EmojiApp/EmojiApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YBM22U9FU3;
 				INFOPLIST_FILE = EmojiApp/Info.plist;
@@ -651,7 +691,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Fernando-de-Lucas.EmojiApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fernando-de-Lucas.EmojiApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

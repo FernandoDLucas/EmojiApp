@@ -15,13 +15,18 @@ class RadioButtonsController : UIView {
     var button3 = RadioButton()
     var button4 = RadioButton()
     var button5 = RadioButton()
-    var emoji1 = UILabel()
-    var emoji2 = UILabel()
-    var emoji3 = UILabel()
-    var emoji4 = UILabel()
-    var emoji5 = UILabel()
+    var emoji1 = UITextField()
+    var emoji2 = UITextField()
+    var emoji3 = UITextField()
+    var emoji4 = UITextField()
+    var emoji5 = UITextField()
     var arrayOfButtons = [UIButton]()
-    var arrayOfEmojis = [UILabel]()
+    var arrayOfEmojis = [UITextField]()
+    
+    
+    weak var delegate: RadioButtonsControllerDelegate?
+    
+    var didChangeSelection: ((Int?) -> Void)?
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -40,7 +45,6 @@ class RadioButtonsController : UIView {
         for button in arrayOfButtons {
             button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         }
-        
         
         let stackViewEmojis = UIStackView(arrangedSubviews: [emoji1, emoji2, emoji3, emoji3, emoji4, emoji5])
         let stackview = UIStackView(arrangedSubviews: [button1, button2, button3, button4, button5])
@@ -76,14 +80,21 @@ class RadioButtonsController : UIView {
 }
     
     @objc func pressed(sender : UIButton){
+        var index: Int? = nil
         for button in arrayOfButtons {
             if button != sender {
                 button.isSelected = false
+            } else {
+                index = arrayOfButtons.firstIndex(of: button)
+                sender.isSelected = true
             }
-            sender.isSelected = true
         }
+        didChangeSelection?(index)
     }
-    
+}
 
+protocol RadioButtonsControllerDelegate: class {
+    
+    func didSelectIndex(index: Int?)
     
 }

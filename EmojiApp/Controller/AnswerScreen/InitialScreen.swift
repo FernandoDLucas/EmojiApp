@@ -47,7 +47,6 @@ class InitialAnswerScreenViewController : UIViewController {
     
     
     func setIdTextField(){
-        
         self.view.addSubview(labelId)
         labelId.translatesAutoresizingMaskIntoConstraints = false
         labelId.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 160).isActive = true
